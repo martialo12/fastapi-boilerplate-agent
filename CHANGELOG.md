@@ -7,13 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2025-01-19
+
+### Fixed
+- Fixed PyPI deployment workflow to use correct secret name (PYPI_API_TOKEN_AGENT)
+
+## [0.2.0] - 2025-01-19
+
 ### Added
 - Project ready for open source release
 - Comprehensive documentation (README, CONTRIBUTING, CODE_OF_CONDUCT)
 - MIT License
 - Professional README with badges and examples
-
-## [0.2.0] - 2025-01-XX
+- Automated PyPI publishing with GitHub Actions
+- CI/CD workflows for testing and deployment
 
 ### Added
 - **Dynamic project naming**: Projects are now generated in directories named after the project (snake_case)
