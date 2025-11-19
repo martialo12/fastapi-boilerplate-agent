@@ -1,10 +1,20 @@
 # 🚀 FastAPI Boilerplate Generator
 
+[![PyPI version](https://img.shields.io/pypi/v/fastapi-boilerplate-generator.svg)](https://pypi.org/project/fastapi-boilerplate-generator/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Downloads](https://img.shields.io/pypi/dm/fastapi-boilerplate-generator.svg)](https://pypi.org/project/fastapi-boilerplate-generator/)
 
 An **AI-powered CLI tool** that generates production-ready FastAPI projects with **clean architecture**, interactive prompts, and customizable configurations. Built with LangChain and LangGraph.
+
+## ⚡ Quick Install
+
+```bash
+pip install fastapi-boilerplate-generator
+export OPENAI_API_KEY="your-key"
+fastapi-boilerplate
+```
 
 ## ✨ Features
 
@@ -45,7 +55,18 @@ An **AI-powered CLI tool** that generates production-ready FastAPI projects with
 - **Python 3.11+**
 - **OpenAI API Key** (for LLM-powered generation)
 
-### Option 1: Install from source
+### Option 1: Install from PyPI (Recommended)
+
+```bash
+# Install the package
+pip install fastapi-boilerplate-generator
+
+# Set up environment variable
+export OPENAI_API_KEY="your-openai-api-key"
+# On Windows: set OPENAI_API_KEY=your-openai-api-key
+```
+
+### Option 2: Install from source (for development)
 
 ```bash
 # Clone the repository
@@ -56,7 +77,7 @@ cd fastapi-boilerplate-agent
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# Install in development mode
 pip install -e .
 
 # Set up environment variables
@@ -64,17 +85,16 @@ cp .env.example .env
 # Edit .env and add your OPENAI_API_KEY
 ```
 
-### Option 2: Install with pip (future)
-
-```bash
-# Coming soon
-pip install fastapi-boilerplate-generator
-```
-
 ## 🚀 Quick Start
 
 ### 1. Run the interactive CLI
 
+If installed from PyPI:
+```bash
+fastapi-boilerplate
+```
+
+If installed from source:
 ```bash
 python -m fastapi_boilerplate_agent.cli
 ```
