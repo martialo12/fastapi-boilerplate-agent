@@ -3,7 +3,7 @@ name: PyPI Release
 on:
   push:
     tags:
-      - "v*.*.*"  # Triggers on version tags like v0.2.0, v1.0.0
+      - "v*.*.*"  # Triggers on version tags like v0.2.0, v1.0.0, v2.0.0
 
 jobs:
   create-github-release:
