@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: fastapi-boilerplate-agent
+Version: 0.1.0
+Summary: LangGraph agent that generates a FastAPI backend boilerplate.
+Author: Martial Wafo
+Requires-Python: >=3.11
+Requires-Dist: fastapi
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: langgraph
+Requires-Dist: pydantic>=2
+Requires-Dist: python-dotenv
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"

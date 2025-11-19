@@ -1,0 +1,9 @@
+fastapi
+langchain
+langchain-openai
+langgraph
+pydantic>=2
+python-dotenv
+
+[dev]
+pytest

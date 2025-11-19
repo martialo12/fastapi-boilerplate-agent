@@ -1,0 +1,38 @@
+# Include important documentation files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include CODE_OF_CONDUCT.md
+include SECURITY.md
+include CONTRIBUTORS.md
+
+# Include configuration files
+include pyproject.toml
+include .env.example
+
+# Include source files
+recursive-include src *.py
+
+# Exclude development files
+exclude .env
+exclude .gitignore
+exclude .gitattributes
+
+# Exclude build directories
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *$py.class
+global-exclude *.so
+global-exclude .DS_Store
+
+# Exclude test files
+prune tests
+prune examples
+
+# Exclude CI/CD files
+prune .github
+
+# Exclude generated projects
+prune *_api/
+prune generated_project/

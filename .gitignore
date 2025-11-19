@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.pyc
+.env
+
+# Generated projects (will be named after the project chosen by user)
+# Examples: invest_with_me/, task_manager/, brain_roi/, etc.
+# Add specific project names here if needed
+generated_project/

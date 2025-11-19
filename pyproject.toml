@@ -1,0 +1,73 @@
+[project]
+name = "fastapi-boilerplate-generator"
+version = "0.2.0"
+description = "AI-powered CLI tool that generates production-ready FastAPI projects with clean architecture"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Martial Wafo", email = "martialo218@gmail.com" }
+]
+maintainers = [
+  { name = "Martial Wafo", email = "martialo218@gmail.com" }
+]
+keywords = [
+  "fastapi",
+  "boilerplate",
+  "generator",
+  "cli",
+  "code-generation",
+  "langchain",
+  "langgraph",
+  "ai",
+  "llm",
+  "clean-architecture",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Framework :: FastAPI",
+  "Topic :: Software Development :: Code Generators",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.104.0",
+  "langchain>=0.1.0",
+  "langchain-openai>=0.0.5",
+  "langgraph>=0.0.20",
+  "pydantic>=2.5.0",
+  "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4.0",
+  "pytest-cov>=4.1.0",
+  "black>=23.0.0",
+  "flake8>=6.0.0",
+  "mypy>=1.5.0",
+  "pre-commit>=3.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/martialo12/fastapi-boilerplate-agent"
+Documentation = "https://github.com/martialo12/fastapi-boilerplate-agent#readme"
+Repository = "https://github.com/martialo12/fastapi-boilerplate-agent"
+Issues = "https://github.com/martialo12/fastapi-boilerplate-agent/issues"
+Changelog = "https://github.com/martialo12/fastapi-boilerplate-agent/blob/main/CHANGELOG.md"
+
+[project.scripts]
+fastapi-boilerplate = "fastapi_boilerplate_agent.cli:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
