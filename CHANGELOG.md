@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.2] - 2025-01-20
+
+### Changed
+- Updated README with PyPI installation instructions as recommended option
+- Added PyPI version and downloads badges
+- Added quick install section for better user experience
+- Reorganized installation options (PyPI first, source second)
+
 ## [0.2.1] - 2025-01-19
 
 ### Fixed
