@@ -42,11 +42,11 @@ async def startup_event():
 @app.get(\"/\", tags=[\"Root\"])
 def read_root():
     \"\"\"Root endpoint returning API information.\"\"\" 
-    return {{
+    return {
         MESSAGE_KEY: WELCOME_MESSAGE,
         DOCUMENTATION_KEY: DOCS_URL,
         VERSION_KEY: API_VERSION,
-    }}
+    }
 """
 
 # Core database configuration - SQLite version
@@ -883,15 +883,15 @@ def client(db):
 TEST_API = """def test_health(client):
     response = client.get("/health")
     assert response.status_code == 200
-    assert response.json() == {{"status": "ok"}}
+    assert response.json() == {"status": "ok"}
 
 
 def test_create_ticket(client):
-    ticket_data = {{
+    ticket_data = {
         "title": "Test Ticket",
         "description": "Test description",
         "status": "open"
-    }}
+    }
     response = client.post("/api/v1/tickets/", json=ticket_data)
     assert response.status_code == 201
     data = response.json()
@@ -908,10 +908,10 @@ def test_list_tickets(client):
 
 def test_get_ticket(client):
     # Create a ticket first
-    ticket_data = {{
+    ticket_data = {
         "title": "Test Ticket",
         "description": "Test description"
-    }}
+    }
     create_response = client.post("/api/v1/tickets/", json=ticket_data)
     ticket_id = create_response.json()["id"]
     
@@ -925,15 +925,15 @@ def test_get_ticket(client):
 
 def test_update_ticket(client):
     # Create a ticket first
-    ticket_data = {{
+    ticket_data = {
         "title": "Original Title",
         "description": "Original description"
-    }}
+    }
     create_response = client.post("/api/v1/tickets/", json=ticket_data)
     ticket_id = create_response.json()["id"]
     
     # Update the ticket
-    update_data = {{"title": "Updated Title"}}
+    update_data = {"title": "Updated Title"}
     response = client.put(f"/api/v1/tickets/{{ticket_id}}", json=update_data)
     assert response.status_code == 200
     data = response.json()
@@ -943,10 +943,10 @@ def test_update_ticket(client):
 
 def test_delete_ticket(client):
     # Create a ticket first
-    ticket_data = {{
+    ticket_data = {
         "title": "Test Ticket",
         "description": "Test description"
-    }}
+    }
     create_response = client.post("/api/v1/tickets/", json=ticket_data)
     ticket_id = create_response.json()["id"]
     
