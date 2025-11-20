@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.7] - 2025-01-20
+
+### Fixed
+- **Critical Fix**: Correctly handle curly braces based on how each template is used
+  - Templates using `.format()` (main.py): Use double braces `{{}}` for literal dictionaries
+  - Templates using `.replace()` (tests, database.py): Use single braces `{}` for dictionaries
+  - F-strings always use double braces `{{variable}}` for escaping
+- Resolves `KeyError: '\n        MESSAGE_KEY'` when generating projects
+- Root endpoint now works correctly
+
 ## [0.2.6] - 2025-01-20
 
 ### Fixed
