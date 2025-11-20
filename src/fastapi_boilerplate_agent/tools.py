@@ -111,7 +111,7 @@ class SQLiteDatabase(Database):
         if self._engine is None:
             self._engine = create_engine(
                 self.database_url,
-                connect_args={{"check_same_thread": False}},
+                connect_args={"check_same_thread": False},
                 pool_pre_ping=True,  # Verify connections before using
             )
             self._session_factory = sessionmaker(
@@ -850,7 +850,7 @@ from app.main import app
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///./test.db"
 
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={{"check_same_thread": False}})
+engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
