@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.6] - 2025-01-20
+
+### Fixed
+- Fixed root endpoint return statement (removed double braces `{{` → `{`)
+- Fixed test templates with incorrect double braces in dictionaries
+- Root endpoint now correctly returns welcome message instead of empty array `[]`
+- Tests now have correct dictionary syntax
+
 ## [0.2.5] - 2025-01-20
 
 ### Fixed

@@ -1,6 +1,6 @@
 [project]
 name = "fastapi-boilerplate-generator"
-version = "0.2.5"
+version = "0.2.6"
 description = "AI-powered CLI tool that generates production-ready FastAPI projects with clean architecture"
 readme = "README.md"
 license = { text = "MIT" }
