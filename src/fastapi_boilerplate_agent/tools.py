@@ -350,7 +350,7 @@ class Ticket(Base):
 TICKETS_SCHEMAS_PY = """from pydantic import BaseModel
 from datetime import datetime
 from typing import Optional
-from app.tickets.models import TicketStatus
+from app.ticket.models import TicketStatus
 
 
 class TicketBase(BaseModel):
@@ -380,8 +380,8 @@ class TicketResponse(TicketBase):
 
 # Tickets repositories
 TICKETS_REPOSITORIES_PY = """from sqlalchemy.orm import Session
-from app.tickets.models import Ticket
-from app.tickets.schemas import TicketCreate, TicketUpdate
+from app.ticket.models import Ticket
+from app.ticket.schemas import TicketCreate, TicketUpdate
 from typing import List, Optional
 
 
@@ -426,9 +426,9 @@ class TicketRepository:
 """
 
 # Tickets services
-TICKETS_SERVICES_PY = """from app.tickets.repositories import TicketRepository
-from app.tickets.schemas import TicketCreate, TicketUpdate, TicketResponse
-from app.tickets.exceptions import TicketNotFoundException
+TICKETS_SERVICES_PY = """from app.ticket.repositories import TicketRepository
+from app.ticket.schemas import TicketCreate, TicketUpdate, TicketResponse
+from app.ticket.exceptions import TicketNotFoundException
 from typing import List
 
 
@@ -514,8 +514,8 @@ MAX_TITLE_LENGTH = 255
 TICKETS_DEPENDENCIES_PY = """from fastapi import Depends
 from sqlalchemy.orm import Session
 from app.core.database import get_db
-from app.tickets.repositories import TicketRepository
-from app.tickets.services import TicketService
+from app.ticket.repositories import TicketRepository
+from app.ticket.services import TicketService
 
 
 def get_ticket_repository(db: Session = Depends(get_db)) -> TicketRepository:
@@ -960,10 +960,10 @@ def test_delete_ticket(client):
 """
 
 # Test Services
-TEST_SERVICES = """from app.tickets.repositories import TicketRepository
-from app.tickets.services import TicketService
-from app.tickets.schemas import TicketCreate, TicketUpdate
-from app.tickets.exceptions import TicketNotFoundException
+TEST_SERVICES = """from app.ticket.repositories import TicketRepository
+from app.ticket.services import TicketService
+from app.ticket.schemas import TicketCreate, TicketUpdate
+from app.ticket.exceptions import TicketNotFoundException
 import pytest
 
 
