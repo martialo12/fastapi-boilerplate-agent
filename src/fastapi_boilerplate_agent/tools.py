@@ -42,11 +42,11 @@ async def startup_event():
 @app.get(\"/\", tags=[\"Root\"])
 def read_root():
     \"\"\"Root endpoint returning API information.\"\"\" 
-    return {
+    return {{
         MESSAGE_KEY: WELCOME_MESSAGE,
         DOCUMENTATION_KEY: DOCS_URL,
         VERSION_KEY: API_VERSION,
-    }
+    }}
 """
 
 # Core database configuration - SQLite version
