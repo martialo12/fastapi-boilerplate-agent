@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.4] - 2025-01-20
+
+### Fixed
+- Fixed ALL import paths in templates (schemas, repositories, services, dependencies, tests)
+- Used singular form 'ticket' instead of plural 'tickets' consistently across all templates
+- Completely resolved ModuleNotFoundError issues (e.g., 'app.test_ais' -> 'app.test_ai')
+
 ## [0.2.3] - 2025-01-20
 
 ### Fixed
