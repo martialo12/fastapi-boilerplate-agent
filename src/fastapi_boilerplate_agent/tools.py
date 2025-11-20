@@ -531,10 +531,10 @@ def get_ticket_service(
 # Tickets router
 TICKETS_ROUTER_PY = """from fastapi import APIRouter, Depends, HTTPException, status
 from typing import List
-from app.tickets.schemas import TicketCreate, TicketUpdate, TicketResponse
-from app.tickets.services import TicketService
-from app.tickets.dependencies import get_ticket_service
-from app.tickets.exceptions import TicketNotFoundException
+from app.ticket.schemas import TicketCreate, TicketUpdate, TicketResponse
+from app.ticket.services import TicketService
+from app.ticket.dependencies import get_ticket_service
+from app.ticket.exceptions import TicketNotFoundException
 
 router = APIRouter()
 
